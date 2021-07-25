@@ -1,4 +1,4 @@
-# Префиксные суммы
+# 1. Префиксные суммы
 
 # Реализация RSQ (Range Sum Query) через перфиксные суммы
 
@@ -11,5 +11,6 @@ def make_prefix_sum(nums):
 def rsq(prefix_sum, l, r):
     return prefix_sum[r] - prefix_sum[l]
 
-print(make_prefix_sum([4, 3, 2, 6, 10, 0, 3, 5, 2, 9, 7]))
-print(rsq(make_prefix_sum([4, 3, 2, 6, 10, 0, 3, 5, 2, 9, 7]), 2, 5))
+arr = [4, 3, 2, 6, 10, 0, 3, 5, 2, 9, 7]
+print(make_prefix_sum(arr))
+print(rsq(make_prefix_sum(arr), 2, 5))
